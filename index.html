@@ -2,423 +2,474 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17362c">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17362c">
 
-  <title>Dallas Cafe | Breakfast & Brunch in North Dallas</title>
-  <meta name="description" content="Visit Dallas Cafe for breakfast plates, pancakes, omelets, sandwiches and brunch favorites. 14999 Preston Rd Ste 104, Dallas, TX. Open daily 7 am - 2:30 pm.">
+<title>Dallas Cafe | Breakfast & Brunch in North Dallas</title>
+<meta name="description" content="Visit Dallas Cafe for breakfast plates, pancakes, omelets, sandwiches and brunch favorites. 14999 Preston Rd Ste 104, Dallas, TX. Open daily 7 am - 2:30 pm.">
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Dallas Cafe | Breakfast & Brunch in North Dallas">
-  <meta property="og:description" content="Visit Dallas Cafe for breakfast plates, pancakes, omelets, sandwiches and brunch favorites. 14999 Preston Rd Ste 104, Dallas, TX. Open daily 7 am - 2:30 pm.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dallas Cafe | Breakfast & Brunch in North Dallas">
+<meta property="og:description" content="Visit Dallas Cafe for breakfast plates, pancakes, omelets, sandwiches and brunch favorites. 14999 Preston Rd Ste 104, Dallas, TX. Open daily 7 am - 2:30 pm.">
 
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <script src="/assets/js/main.js" defer></script>
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Dallas Cafe",
-    "telephone": "+1-972-707-8000",
-    "servesCuisine": "Breakfast and brunch",
-    "priceRange": "$10-$20",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "14999 Preston Rd Ste 104",
-      "addressLocality": "Dallas",
-      "addressRegion": "TX",
-      "postalCode": "75254",
-      "addressCountry": "US"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "07:00",
-        "closes": "14:30"
-      }
-    ]
+<script src="/assets/js/main.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Dallas Cafe",
+  "telephone": "+1-972-707-8000",
+  "servesCuisine": "Breakfast and brunch",
+  "priceRange": "$10-$20",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "14999 Preston Rd Ste 104",
+    "addressLocality": "Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75254",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday",
+      "Thursday", "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "07:00",
+    "closes": "14:30"
+  }]
+}
+</script>
+
+<style>
+/* ==========================================
+   DALLAS CAFE - LOGO
+   ========================================== */
+
+.site-header .dc-brand,
+.site-footer .dc-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  min-width: 0;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.site-header .dc-logo,
+.site-footer .dc-logo {
+  display: block;
+  width: 225px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.site-footer .dc-logo {
+  width: 235px;
+}
+
+.site-header .nav-wrap {
+  align-items: center;
+}
+
+.site-footer .footer-top > div:first-child {
+  min-width: 0;
+}
+
+/* ==========================================
+   STOREFRONT CAPTION - STRUCTURAL FIX
+   ========================================== */
+
+/* The image and caption share a wrapper, but
+   the caption is OUTSIDE the decorated image. */
+
+.home-hero .dc-hero-media {
+  min-width: 0;
+  width: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-hero .dc-hero-media > .hero-art {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+/* Caption is a separate sibling of .hero-art */
+
+.home-hero .dc-hero-media > .dc-hero-caption {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: center;
+
+  gap: 8px 20px;
+  width: 100%;
+
+  /* Clear space below the decorative border */
+  margin: 46px 0 0;
+  padding: 0 8px;
+
+  box-sizing: border-box;
+
+  color: #17362c;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+  text-align: left;
+}
+
+/* Come on in + street address */
+
+.home-hero .dc-hero-caption .dc-caption-address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  min-width: 0;
+}
+
+.home-hero .dc-hero-caption .dc-caption-address strong {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.home-hero .dc-hero-caption .dc-caption-address span {
+  color: #51685e;
+}
+
+/* City on the right */
+
+.home-hero .dc-hero-caption .dc-caption-city {
+  white-space: nowrap;
+  text-align: right;
+  color: #51685e;
+}
+
+/* ==========================================
+   INFINITE SCROLLING MARQUEE
+   ========================================== */
+
+.warm-ribbon {
+  overflow: hidden !important;
+  width: 100%;
+}
+
+.warm-ribbon .dc-marquee-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+
+  width: max-content;
+  min-width: max-content;
+  gap: 0 !important;
+
+  animation: dc-marquee-left 28s linear infinite;
+  will-change: transform;
+}
+
+.warm-ribbon .dc-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+
+  gap: 40px;
+  padding: 0 40px 0 0;
+
+  box-sizing: border-box;
+  min-height: 58px;
+  white-space: nowrap;
+}
+
+.warm-ribbon .dc-marquee-group span {
+  flex: 0 0 auto;
+  color: #17362c;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.warm-ribbon .dc-marquee-group svg {
+  flex: 0 0 auto;
+  display: block;
+  width: 14px;
+  height: 14px;
+  color: #17362c;
+}
+
+@keyframes dc-marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  </script>
 
-  <style>
-    /* =========================================
-       DALLAS CAFE - NEW LOGO
-       ========================================= */
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
 
-    .site-header .dc-brand,
-    .site-footer .dc-brand {
-      display: inline-flex;
-      align-items: center;
-      flex: 0 0 auto;
-      min-width: 0;
-      line-height: 0;
-      text-decoration: none;
-    }
+/* ==========================================
+   FOOTER DECORATIVE LOGO
+   ========================================== */
 
-    .site-header .dc-logo,
-    .site-footer .dc-logo {
-      display: block;
-      width: 225px;
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
+.site-footer .footer-wordmark.dc-footer-wordmark {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 
-    .site-footer .dc-logo {
-      width: 235px;
-    }
+  width: 100%;
+  max-width: 100%;
 
-    .site-header .nav-wrap {
-      align-items: center;
-    }
+  position: static !important;
+  inset: auto !important;
 
-    .site-footer .footer-top > div:first-child {
-      min-width: 0;
-    }
+  transform: none !important;
+  opacity: 1 !important;
 
-    /* =========================================
-       STOREFRONT CAPTION ALIGNMENT
-       ========================================= */
+  margin: 0 !important;
+  padding: 28px 16px 12px;
 
-    .home-hero .hero-art {
-      min-width: 0;
-    }
+  box-sizing: border-box;
+  overflow: hidden;
 
-    .home-hero .hero-art-caption {
-      position: static !important;
-      inset: auto !important;
-      transform: none !important;
+  line-height: 0;
+  font-size: 0;
+}
 
-      display: flex !important;
-      align-items: baseline !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
+.site-footer .dc-footer-wordmark img {
+  display: block;
+  width: min(720px, 80vw);
+  max-width: 100%;
+  height: auto;
+  opacity: 0.28;
+  object-fit: contain;
+}
 
-      gap: 6px 22px !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 18px 0 0 !important;
-      padding: 0 6px !important;
+/* ==========================================
+   TABLET
+   ========================================== */
 
-      box-sizing: border-box !important;
-      line-height: 1.55 !important;
-      text-align: left !important;
-    }
+@media (max-width: 800px) {
+  .site-header .dc-logo {
+    width: 185px;
+  }
 
-    .home-hero .dc-caption-address {
-      display: inline-flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 2px 8px;
-      min-width: 0;
-    }
+  .site-footer .dc-logo {
+    width: 205px;
+  }
 
-    .home-hero .dc-caption-city {
-      white-space: nowrap;
-    }
+  .home-hero .dc-hero-media > .dc-hero-caption {
+    margin-top: 40px;
+  }
 
-    /* =========================================
-       INFINITE SCROLLING MARQUEE
-       ========================================= */
+  .warm-ribbon .dc-marquee-group {
+    min-height: 52px;
+    gap: 26px;
+    padding-right: 26px;
+  }
 
-    .warm-ribbon {
-      overflow: hidden !important;
-      width: 100%;
-    }
+  .warm-ribbon .dc-marquee-group span {
+    font-size: 12px;
+  }
+}
 
-    .warm-ribbon .dc-marquee-track {
-      display: flex !important;
-      flex-wrap: nowrap !important;
-      align-items: center;
+/* ==========================================
+   MOBILE
+   ========================================== */
 
-      width: max-content;
-      min-width: max-content;
-      gap: 0 !important;
+@media (max-width: 520px) {
+  .site-header .dc-logo {
+    width: 160px;
+  }
 
-      animation: dc-marquee-left 28s linear infinite;
-      will-change: transform;
-    }
+  .home-hero .dc-hero-media > .dc-hero-caption {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 36px;
+    gap: 2px;
+  }
 
-    .warm-ribbon .dc-marquee-group {
-      display: flex;
-      flex: 0 0 auto;
-      align-items: center;
+  .home-hero .dc-hero-media > .dc-hero-caption
+  .dc-caption-city {
+    text-align: left;
+  }
 
-      gap: 40px;
-      padding: 0 40px 0 0;
-      box-sizing: border-box;
+  .warm-ribbon .dc-marquee-track {
+    animation-duration: 23s;
+  }
+}
 
-      min-height: 58px;
-      white-space: nowrap;
-    }
-
-    .warm-ribbon .dc-marquee-group span {
-      flex: 0 0 auto;
-      color: #17362c;
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1.3;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .warm-ribbon .dc-marquee-group svg {
-      flex: 0 0 auto;
-      display: block;
-      width: 14px;
-      height: 14px;
-      color: #17362c;
-    }
-
-    @keyframes dc-marquee-left {
-      from {
-        transform: translate3d(0, 0, 0);
-      }
-
-      to {
-        transform: translate3d(-50%, 0, 0);
-      }
-    }
-
-    /* =========================================
-       FOOTER DECORATIVE LOGO
-       ========================================= */
-
-    .site-footer .footer-wordmark.dc-footer-wordmark {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      width: 100%;
-      max-width: 100%;
-
-      position: static !important;
-      inset: auto !important;
-      transform: none !important;
-      opacity: 1 !important;
-      margin: 0 !important;
-
-      padding: 28px 16px 12px;
-      box-sizing: border-box;
-      overflow: hidden;
-      line-height: 0;
-      font-size: 0;
-    }
-
-    .site-footer .dc-footer-wordmark img {
-      display: block;
-      width: min(720px, 80vw);
-      max-width: 100%;
-      height: auto;
-      opacity: 0.28;
-      object-fit: contain;
-    }
-
-    /* =========================================
-       TABLET AND MOBILE
-       ========================================= */
-
-    @media (max-width: 800px) {
-      .site-header .dc-logo {
-        width: 185px;
-      }
-
-      .site-footer .dc-logo {
-        width: 205px;
-      }
-
-      .home-hero .hero-art-caption {
-        margin-top: 16px !important;
-      }
-
-      .warm-ribbon .dc-marquee-group {
-        min-height: 52px;
-        gap: 26px;
-        padding-right: 26px;
-      }
-
-      .warm-ribbon .dc-marquee-group span {
-        font-size: 12px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .site-header .dc-logo {
-        width: 160px;
-      }
-
-      .home-hero .hero-art-caption {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 2px !important;
-      }
-
-      .warm-ribbon .dc-marquee-track {
-        animation-duration: 23s;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .warm-ribbon .dc-marquee-track {
-        animation: none;
-      }
-    }
-  </style>
+@media (prefers-reduced-motion: reduce) {
+  .warm-ribbon .dc-marquee-track {
+    animation: none;
+  }
+}
+</style>
 </head>
 
-<body
-  data-page="home"
-  data-dallas-home-version="logo-caption-marquee-20261031"
->
+<body data-page="home" data-dallas-home-version="caption-outside-frame-20261031">
 
-  <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="top-ribbon">
-    <div class="container">
-      <p>
-        Good mornings start at Dallas Cafe
-        &nbsp; / &nbsp;
-        Open daily 7:00 am - 2:30 pm
-      </p>
-      <p class="ribbon-right">
-        <span class="ribbon-dot"></span>
-        North Dallas, Texas
-      </p>
-    </div>
+<!-- TOP RIBBON -->
+<div class="top-ribbon">
+  <div class="container">
+    <p>
+      Good mornings start at Dallas Cafe
+      &nbsp; / &nbsp;
+      Open daily 7:00 am - 2:30 pm
+    </p>
+
+    <p class="ribbon-right">
+      <span class="ribbon-dot"></span>
+      North Dallas, Texas
+    </p>
   </div>
+</div>
 
-  <!-- HEADER -->
-  <header class="site-header" data-site-header>
-    <div class="container nav-wrap">
+<!-- HEADER -->
+<header class="site-header" data-site-header>
+  <div class="container nav-wrap">
 
-      <a
-        class="brand dc-brand"
-        href="/"
-        aria-label="Dallas Café home"
+    <a class="brand dc-brand" href="/" aria-label="Dallas Café home">
+      <img
+        class="dc-logo"
+        src="/assets/img/dallas-cafe-logo.png?v=3"
+        width="1991"
+        height="629"
+        alt="Dallas Café — Breakfast Brunch"
       >
-        <img
-          class="dc-logo"
-          src="/assets/img/dallas-cafe-logo.png?v=3"
-          width="1991"
-          height="629"
-          alt="Dallas Café — Breakfast Brunch"
-        >
-      </a>
+    </a>
 
-      <nav
-        class="site-nav"
-        id="site-navigation"
-        aria-label="Main navigation"
-      >
-        <a href="/" aria-current="page">Home</a>
-        <a href="/menu/">Our Menu</a>
-        <a href="/delivery/">Delivery &amp; Pickup</a>
-        <a href="/contact/">Visit &amp; Contact</a>
+    <nav
+      class="site-nav"
+      id="site-navigation"
+      aria-label="Main navigation"
+    >
+      <a href="/" aria-current="page">Home</a>
+      <a href="/menu/">Our Menu</a>
+      <a href="/delivery/">Delivery &amp; Pickup</a>
+      <a href="/contact/">Visit &amp; Contact</a>
 
-        <div class="mobile-nav-actions">
-          <a href="tel:+19727078000">
-            Call (972) 707-8000
-          </a>
-        </div>
-      </nav>
-
-      <div class="nav-actions">
-        <a class="nav-call" href="tel:+19727078000">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.9"
-               stroke-linecap="round" stroke-linejoin="round">
+      <div class="mobile-nav-actions">
+        <a href="tel:+19727078000">
+          <svg aria-hidden="true" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor"
+               stroke-width="1.9" stroke-linecap="round"
+               stroke-linejoin="round">
             <path d="M22 16.9v3a2 2 0 0 1-2.2 2c-9.5-.8-16.9-8.2-17.7-17.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.7a2 2 0 0 1-.6 1.8L7.6 9.6a16.1 16.1 0 0 0 6.8 6.8l1.4-1.4a2 2 0 0 1 1.8-.6l2.7.5a2 2 0 0 1 1.7 2z"/>
           </svg>
-          Call to Order
+          Call (972) 707-8000
         </a>
-
-        <button
-          class="menu-toggle"
-          data-menu-toggle
-          type="button"
-          aria-label="Open navigation"
-          aria-controls="site-navigation"
-          aria-expanded="false"
-        >
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2"
-               stroke-linecap="round">
-            <path d="M4 7h16M4 12h16M4 17h16"/>
-          </svg>
-        </button>
       </div>
+    </nav>
 
+    <div class="nav-actions">
+      <a class="nav-call" href="tel:+19727078000">
+        <svg aria-hidden="true" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor"
+             stroke-width="1.9" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2c-9.5-.8-16.9-8.2-17.7-17.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1-.6 1.8L7.6 9.6a16.1 16.1 0 0 0 6.8 6.8l1.4-1.4a2 2 0 0 1 1.8-.6l2.7.5a2 2 0 0 1 1.7 2z"/>
+        </svg>
+        Call to Order
+      </a>
+
+      <button
+        class="menu-toggle"
+        data-menu-toggle
+        type="button"
+        aria-label="Open navigation"
+        aria-controls="site-navigation"
+        aria-expanded="false"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
     </div>
-  </header>
 
-  <main id="main">
+  </div>
+</header>
 
-    <!-- HERO -->
-    <section class="home-hero">
-      <div class="container">
+<main id="main">
 
-        <div class="hero-copy">
-          <span class="eyebrow">
-            Welcome to your happy place
-          </span>
+  <!-- HERO -->
+  <section class="home-hero">
+    <div class="container">
 
-          <h1>
-            Good food.<br>
-            Better <em>mornings.</em>
-          </h1>
+      <div class="hero-copy">
+        <span class="eyebrow">
+          Welcome to your happy place
+        </span>
 
-          <p class="hero-description">
-            Fresh starts taste better here. Pull up a chair
-            for big breakfast plates, golden pancakes,
-            made-your-way omelets and all-day diner favorites
-            in the heart of North Dallas.
-          </p>
+        <h1>
+          Good food.<br>
+          Better <em>mornings.</em>
+        </h1>
 
-          <div class="flex-actions">
-            <a class="btn btn--red" href="/menu/">
-              Explore the menu
-              <svg aria-hidden="true" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor"
-                   stroke-width="1.9" stroke-linecap="round"
-                   stroke-linejoin="round">
-                <path d="M5 12h14m-6-6 6 6-6 6"/>
-              </svg>
-            </a>
+        <p class="hero-description">
+          Fresh starts taste better here. Pull up a chair
+          for big breakfast plates, golden pancakes,
+          made-your-way omelets and all-day diner favorites
+          in the heart of North Dallas.
+        </p>
 
-            <a class="btn btn--outline" href="tel:+19727078000">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="1.9"
-                   stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.9v3a2 2 0 0 1-2.2 2c-9.5-.8-16.9-8.2-17.7-17.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.7a2 2 0 0 1-.6 1.8L7.6 9.6a16.1 16.1 0 0 0 6.8 6.8l1.4-1.4a2 2 0 0 1 1.8-.6l2.7.5a2 2 0 0 1 1.7 2z"/>
-              </svg>
-              Call to order
-            </a>
-          </div>
+        <div class="flex-actions">
 
-          <div class="hero-proof">
-            <span class="proof-stars" aria-hidden="true">
-              &#9733;&#9733;&#9733;&#9733;&#9733;
-            </span>
-            <span>
-              <strong>4.8 on Google</strong> &mdash; 60 reviews
-            </span>
-          </div>
+          <a class="btn btn--red" href="/menu/">
+            Explore the menu
+            <svg aria-hidden="true" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M5 12h14m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+
+          <a class="btn btn--outline" href="tel:+19727078000">
+            <svg aria-hidden="true" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2c-9.5-.8-16.9-8.2-17.7-17.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.7a2 2 0 0 1-.6 1.8L7.6 9.6a16.1 16.1 0 0 0 6.8 6.8l1.4-1.4a2 2 0 0 1 1.8-.6l2.7.5a2 2 0 0 1 1.7 2z"/>
+            </svg>
+            Call to order
+          </a>
+
         </div>
 
+        <div class="hero-proof">
+          <span class="proof-stars" aria-hidden="true">
+            &#9733;&#9733;&#9733;&#9733;&#9733;
+          </span>
+          <span>
+            <strong>4.8 on Google</strong> &mdash; 60 reviews
+          </span>
+        </div>
+      </div>
+
+      <!-- STOREFRONT AND CAPTION -->
+      <div class="dc-hero-media">
+
+        <!-- Decorated image stays separate -->
         <div class="hero-art">
+
           <div class="hero-image-wrap">
             <img
               src="/assets/img/dallas-cafe-storefront.webp"
@@ -441,470 +492,443 @@
             BRUNCH <span>is always</span> a good idea.
           </div>
 
-          <div class="hero-art-caption">
-            <span class="dc-caption-address">
-              <strong>Come on in.</strong>
-              <span>14999 Preston Rd, Ste 104</span>
-            </span>
-            <span class="dc-caption-city">Dallas, TX</span>
+        </div>
+
+        <!-- Caption is OUTSIDE the image border -->
+        <div class="dc-hero-caption">
+
+          <div class="dc-caption-address">
+            <strong>Come on in.</strong>
+            <span>14999 Preston Rd, Ste 104</span>
           </div>
+
+          <span class="dc-caption-city">
+            Dallas, TX
+          </span>
+
         </div>
 
       </div>
-    </section>
 
-    <!-- INFINITE MARQUEE -->
-    <div class="warm-ribbon" aria-label="Our favorite things">
-      <div class="dc-marquee-track">
-
-        <div class="dc-marquee-group">
-          <span>Rise &amp; shine</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-
-          <span>Breakfast all day</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-
-          <span>Come hungry</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-
-          <span>Coffee &amp; good company</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-        </div>
-
-        <div class="dc-marquee-group" aria-hidden="true">
-          <span>Rise &amp; shine</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-
-          <span>Breakfast all day</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-
-          <span>Come hungry</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-
-          <span>Coffee &amp; good company</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
-          </svg>
-        </div>
-
-      </div>
     </div>
+  </section>
 
-    <!-- FAVORITES -->
-    <section class="section-space" aria-labelledby="favorites-title">
-      <div class="container">
-        <div class="section-header-split">
-          <div>
-            <span class="eyebrow">The good stuff</span>
-            <h2 class="section-heading" id="favorites-title">
-              Made for <em>cravings.</em>
-            </h2>
+  <!-- INFINITE MARQUEE -->
+  <div class="warm-ribbon" aria-label="Our favorite things">
+    <div class="dc-marquee-track">
+
+      <div class="dc-marquee-group">
+        <span>Rise &amp; shine</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+        <span>Breakfast all day</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+        <span>Come hungry</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+        <span>Coffee &amp; good company</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+      </div>
+
+      <div class="dc-marquee-group" aria-hidden="true">
+        <span>Rise &amp; shine</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+        <span>Breakfast all day</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+        <span>Come hungry</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+        <span>Coffee &amp; good company</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m12 1.5 2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2L12 1.5Z"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FAVORITES -->
+  <section class="section-space" aria-labelledby="favorites-title">
+    <div class="container">
+
+      <div class="section-header-split">
+        <div>
+          <span class="eyebrow">The good stuff</span>
+          <h2 class="section-heading" id="favorites-title">
+            Made for <em>cravings.</em>
+          </h2>
+        </div>
+        <p class="section-lead">
+          From the sweet stack you have been thinking about
+          to your favorite savory breakfast, there is
+          something for every kind of morning.
+        </p>
+      </div>
+
+      <div class="food-card-grid">
+
+        <article class="food-card">
+          <div class="food-art food-art--pancake">
+            <img
+              src="/assets/img/pancakes.svg"
+              width="500"
+              height="500"
+              alt="Illustration of golden pancakes with syrup"
+              loading="lazy"
+            >
           </div>
-          <p class="section-lead">
-            From the sweet stack you have been thinking about
-            to your favorite savory breakfast, there is
-            something for every kind of morning.
-          </p>
+          <div class="food-card-details">
+            <span>Something sweet</span>
+            <h3>Pancakes &amp; more</h3>
+            <p>Fluffy breakfast classics with toppings your way.</p>
+            <div class="food-card-footer">
+              <strong>From $4</strong>
+              <a href="/menu/#pancakes">See options &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-art food-art--omelet">
+            <img
+              src="/assets/img/omelet.svg"
+              width="500"
+              height="500"
+              alt="Illustration of a golden omelet on a plate"
+              loading="lazy"
+            >
+          </div>
+          <div class="food-card-details">
+            <span>A cafe classic</span>
+            <h3>Build an omelet</h3>
+            <p>Three eggs, your favorite fillings, and a side.</p>
+            <div class="food-card-footer">
+              <strong>From $10</strong>
+              <a href="/menu/#build-your-own">Build yours &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-art food-art--burger">
+            <img
+              src="/assets/img/burger.svg"
+              width="500"
+              height="500"
+              alt="Illustration of a cheeseburger"
+              loading="lazy"
+            >
+          </div>
+          <div class="food-card-details">
+            <span>For the lunch crowd</span>
+            <h3>Classic burgers</h3>
+            <p>From hamburger basics to cheese-loaded favorites.</p>
+            <div class="food-card-footer">
+              <strong>From $9.50</strong>
+              <a href="/menu/#burgers">See burgers &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="menu-center-link">
+        <a class="btn btn--ink" href="/menu/">
+          Browse the full menu
+          <svg aria-hidden="true" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor"
+               stroke-width="1.9" stroke-linecap="round"
+               stroke-linejoin="round">
+            <path d="M5 12h14m-6-6 6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story-section" aria-labelledby="story-title">
+    <div class="container story-grid">
+
+      <div class="story-image-frame">
+        <img
+          src="/assets/img/dallas-cafe-storefront-small.webp"
+          width="970"
+          height="546"
+          alt="Stylized illustration of the Dallas Cafe entrance and storefront"
+          loading="lazy"
+        >
+        <div class="story-photo-label">See you at breakfast!</div>
+      </div>
+
+      <div>
+        <span class="eyebrow eyebrow--light">
+          Your neighborhood breakfast stop
+        </span>
+
+        <h2 class="section-heading" id="story-title">
+          A little diner energy.
+          <em>A lot of heart.</em>
+        </h2>
+
+        <p class="section-lead">
+          Coffee first? Pancakes every time?
+          A hearty plate with all the fixings?
+          Whatever your morning calls for, our menu
+          has your kind of comfort food.
+        </p>
+
+        <div class="story-checks">
+          <div class="story-check">
+            <b>&#10003;</b> Breakfast and brunch favorites
+          </div>
+          <div class="story-check">
+            <b>&#10003;</b> Burgers, sandwiches and tacos
+          </div>
+          <div class="story-check">
+            <b>&#10003;</b> Open seven days a week
+          </div>
+          <div class="story-check">
+            <b>&#10003;</b> Easy to find in North Dallas
+          </div>
         </div>
 
-        <div class="food-card-grid">
-
-          <article class="food-card">
-            <div class="food-art food-art--pancake">
-              <img
-                src="/assets/img/pancakes.svg"
-                width="500"
-                height="500"
-                alt="Illustration of golden pancakes with syrup"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="food-card-details">
-              <span>Something sweet</span>
-              <h3>Pancakes &amp; more</h3>
-              <p>
-                Fluffy breakfast classics with toppings your way.
-              </p>
-
-              <div class="food-card-footer">
-                <strong>From $4</strong>
-                <a href="/menu/#pancakes">See options &rarr;</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="food-card">
-            <div class="food-art food-art--omelet">
-              <img
-                src="/assets/img/omelet.svg"
-                width="500"
-                height="500"
-                alt="Illustration of a golden omelet on a plate"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="food-card-details">
-              <span>A cafe classic</span>
-              <h3>Build an omelet</h3>
-              <p>
-                Three eggs, your favorite fillings, and a side.
-              </p>
-
-              <div class="food-card-footer">
-                <strong>From $10</strong>
-                <a href="/menu/#build-your-own">
-                  Build yours &rarr;
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="food-card">
-            <div class="food-art food-art--burger">
-              <img
-                src="/assets/img/burger.svg"
-                width="500"
-                height="500"
-                alt="Illustration of a cheeseburger"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="food-card-details">
-              <span>For the lunch crowd</span>
-              <h3>Classic burgers</h3>
-              <p>
-                From hamburger basics to cheese-loaded favorites.
-              </p>
-
-              <div class="food-card-footer">
-                <strong>From $9.50</strong>
-                <a href="/menu/#burgers">See burgers &rarr;</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="menu-center-link">
-          <a class="btn btn--ink" href="/menu/">
-            Browse the full menu
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="1.9"
-                 stroke-linecap="round" stroke-linejoin="round">
+        <div class="flex-actions">
+          <a class="btn btn--yellow" href="/contact/">
+            Plan your visit
+            <svg aria-hidden="true" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round"
+                 stroke-linejoin="round">
               <path d="M5 12h14m-6-6 6 6-6 6"/>
             </svg>
           </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- STORY -->
-    <section
-      class="story-section"
-      aria-labelledby="story-title"
-    >
-      <div class="container story-grid">
-
-        <div class="story-image-frame">
-          <img
-            src="/assets/img/dallas-cafe-storefront-small.webp"
-            width="970"
-            height="546"
-            alt="Stylized illustration of the Dallas Cafe entrance and storefront"
-            loading="lazy"
-          >
-          <div class="story-photo-label">
-            See you at breakfast!
-          </div>
-        </div>
-
-        <div>
-          <span class="eyebrow eyebrow--light">
-            Your neighborhood breakfast stop
-          </span>
-
-          <h2 class="section-heading" id="story-title">
-            A little diner energy.
-            <em>A lot of heart.</em>
-          </h2>
-
-          <p class="section-lead">
-            Coffee first? Pancakes every time?
-            A hearty plate with all the fixings?
-            Whatever your morning calls for, our menu
-            has your kind of comfort food.
-          </p>
-
-          <div class="story-checks">
-            <div class="story-check">
-              <b>&#10003;</b> Breakfast and brunch favorites
-            </div>
-            <div class="story-check">
-              <b>&#10003;</b> Burgers, sandwiches and tacos
-            </div>
-            <div class="story-check">
-              <b>&#10003;</b> Open seven days a week
-            </div>
-            <div class="story-check">
-              <b>&#10003;</b> Easy to find in North Dallas
-            </div>
-          </div>
-
-          <div class="flex-actions">
-            <a class="btn btn--yellow" href="/contact/">
-              Plan your visit
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="1.9"
-                   stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14m-6-6 6 6-6 6"/>
-              </svg>
-            </a>
-
-            <a
-              class="btn btn--outline-light"
-              href="tel:+19727078000"
-            >
-              Give us a call
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- VISIT -->
-    <section class="section-space" aria-labelledby="visit-title">
-      <div class="container">
-
-        <div class="section-header-split">
-          <div>
-            <span class="eyebrow">Make it a date</span>
-            <h2 class="section-heading" id="visit-title">
-              Your table <em>awaits.</em>
-            </h2>
-          </div>
-
-          <p class="section-lead">
-            Drop by for breakfast or check delivery
-            and pickup options over the phone.
-          </p>
-        </div>
-
-        <div class="visit-grid">
-
-          <article class="visit-card">
-            <div class="visit-icon">
-              <svg aria-hidden="true" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor"
-                   stroke-width="1.9" stroke-linecap="round"
-                   stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M12 7v5l3.5 2"/>
-              </svg>
-            </div>
-
-            <h3>Every single day.</h3>
-            <p>
-              Monday through Sunday<br>
-              <strong>7:00 am - 2:30 pm</strong>
-            </p>
-
-            <a class="text-link" href="/contact/">
-              See our hours &rarr;
-            </a>
-          </article>
-
-          <article class="visit-card">
-            <div class="visit-icon">
-              <svg aria-hidden="true" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor"
-                   stroke-width="1.9" stroke-linecap="round"
-                   stroke-linejoin="round">
-                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"/>
-                <circle cx="12" cy="10" r="2.5"/>
-              </svg>
-            </div>
-
-            <h3>Right in Dallas.</h3>
-            <p>
-              14999 Preston Road, Suite 104<br>
-              Dallas, TX 75254
-            </p>
-
-            <a
-              class="text-link"
-              href="https://www.google.com/maps/search/?api=1&amp;query=14999+Preston+Rd+Ste+104%2C+Dallas%2C+TX+75254"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get directions &rarr;
-            </a>
-          </article>
-
-          <article class="visit-card">
-            <div class="visit-icon">
-              <svg aria-hidden="true" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor"
-                   stroke-width="1.9" stroke-linecap="round"
-                   stroke-linejoin="round">
-                <path d="M4 8h16l-1 13H5L4 8Z"/>
-                <path d="M9 10V6a3 3 0 0 1 6 0v4"/>
-              </svg>
-            </div>
-
-            <h3>Breakfast to go?</h3>
-
-            <p>
-              Call the cafe to ask about delivery
-              and pickup availability.
-            </p>
-
-            <a class="text-link" href="/delivery/">
-              Delivery &amp; pickup info &rarr;
-            </a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- BOTTOM CTA -->
-    <section class="bottom-cta">
-      <div class="container">
-        <div class="cta-panel">
-
-          <div>
-            <span class="eyebrow">Ready when you are</span>
-            <h2>
-              Let's get something
-              <span class="serif-italic">delicious.</span>
-            </h2>
-          </div>
 
           <a
-            class="btn btn--light"
+            class="btn btn--outline-light"
             href="tel:+19727078000"
           >
-            Call (972) 707-8000
+            Give us a call
           </a>
-
         </div>
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+  <!-- VISIT -->
+  <section class="section-space" aria-labelledby="visit-title">
     <div class="container">
 
-      <div class="footer-top">
-
+      <div class="section-header-split">
         <div>
-          <a
-            class="brand dc-brand"
-            href="/"
-            aria-label="Dallas Café home"
-          >
-            <img
-              class="dc-logo"
-              src="/assets/img/dallas-cafe-logo.png?v=3"
-              width="1991"
-              height="629"
-              alt="Dallas Café — Breakfast Brunch"
-            >
-          </a>
-
-          <p class="footer-blurb">
-            A good breakfast. A welcoming table.
-            All the classics you came hungry for,
-            right here in North Dallas.
-          </p>
+          <span class="eyebrow">Make it a date</span>
+          <h2 class="section-heading" id="visit-title">
+            Your table <em>awaits.</em>
+          </h2>
         </div>
+        <p class="section-lead">
+          Drop by for breakfast or check delivery
+          and pickup options over the phone.
+        </p>
+      </div>
 
-        <div class="footer-column">
-          <h3>Explore</h3>
-          <a href="/">Home</a>
-          <a href="/menu/">Our Menu</a>
-          <a href="/delivery/">Delivery &amp; Pickup</a>
-          <a href="/contact/">Visit &amp; Contact</a>
-        </div>
+      <div class="visit-grid">
 
-        <div class="footer-column">
-          <h3>Find us</h3>
+        <article class="visit-card">
+          <div class="visit-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3.5 2"/>
+            </svg>
+          </div>
+          <h3>Every single day.</h3>
           <p>
-            14999 Preston Rd, Ste 104<br>
+            Monday through Sunday<br>
+            <strong>7:00 am - 2:30 pm</strong>
+          </p>
+          <a class="text-link" href="/contact/">
+            See our hours &rarr;
+          </a>
+        </article>
+
+        <article class="visit-card">
+          <div class="visit-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+          </div>
+          <h3>Right in Dallas.</h3>
+          <p>
+            14999 Preston Road, Suite 104<br>
             Dallas, TX 75254
           </p>
           <a
+            class="text-link"
             href="https://www.google.com/maps/search/?api=1&amp;query=14999+Preston+Rd+Ste+104%2C+Dallas%2C+TX+75254"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Get directions
+            Get directions &rarr;
           </a>
-        </div>
+        </article>
 
-        <div class="footer-column">
-          <h3>Get in touch</h3>
-          <a href="tel:+19727078000">
-            (972) 707-8000
-          </a>
+        <article class="visit-card">
+          <div class="visit-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M4 8h16l-1 13H5L4 8Z"/>
+              <path d="M9 10V6a3 3 0 0 1 6 0v4"/>
+            </svg>
+          </div>
+          <h3>Breakfast to go?</h3>
           <p>
-            Every day<br>
-            7:00 am - 2:30 pm
+            Call the cafe to ask about delivery
+            and pickup availability.
           </p>
-          <a href="/delivery/">
-            Ordering information
+          <a class="text-link" href="/delivery/">
+            Delivery &amp; pickup info &rarr;
           </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <div class="cta-panel">
+
+        <div>
+          <span class="eyebrow">Ready when you are</span>
+          <h2>
+            Let's get something
+            <span class="serif-italic">delicious.</span>
+          </h2>
         </div>
 
+        <a class="btn btn--light" href="tel:+19727078000">
+          Call (972) 707-8000
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div>
+        <a
+          class="brand dc-brand"
+          href="/"
+          aria-label="Dallas Café home"
+        >
+          <img
+            class="dc-logo"
+            src="/assets/img/dallas-cafe-logo.png?v=3"
+            width="1991"
+            height="629"
+            alt="Dallas Café — Breakfast Brunch"
+          >
+        </a>
+
+        <p class="footer-blurb">
+          A good breakfast. A welcoming table.
+          All the classics you came hungry for,
+          right here in North Dallas.
+        </p>
       </div>
 
-      <div class="footer-bottom">
-        <span>
-          &copy; <span data-year>2026</span>
-          Dallas Cafe. All rights reserved.
-        </span>
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="/">Home</a>
+        <a href="/menu/">Our Menu</a>
+        <a href="/delivery/">Delivery &amp; Pickup</a>
+        <a href="/contact/">Visit &amp; Contact</a>
+      </div>
 
-        <span>
-          Menu prices and availability may change.
-          Please confirm when ordering.
-        </span>
+      <div class="footer-column">
+        <h3>Find us</h3>
+        <p>
+          14999 Preston Rd, Ste 104<br>
+          Dallas, TX 75254
+        </p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&amp;query=14999+Preston+Rd+Ste+104%2C+Dallas%2C+TX+75254"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get directions
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Get in touch</h3>
+        <a href="tel:+19727078000">
+          (972) 707-8000
+        </a>
+        <p>
+          Every day<br>
+          7:00 am - 2:30 pm
+        </p>
+        <a href="/delivery/">Ordering information</a>
       </div>
 
     </div>
 
-    <div
-      class="footer-wordmark dc-footer-wordmark"
-      aria-hidden="true"
+    <div class="footer-bottom">
+      <span>
+        &copy; <span data-year>2026</span>
+        Dallas Cafe. All rights reserved.
+      </span>
+      <span>
+        Menu prices and availability may change.
+        Please confirm when ordering.
+      </span>
+    </div>
+
+  </div>
+
+  <div
+    class="footer-wordmark dc-footer-wordmark"
+    aria-hidden="true"
+  >
+    <img
+      src="/assets/img/dallas-cafe-logo.png?v=3"
+      alt=""
+      loading="lazy"
     >
-      <img
-        src="/assets/img/dallas-cafe-logo.png?v=3"
-        alt=""
-        loading="lazy"
-      >
-    </div>
+  </div>
 
-  </footer>
+</footer>
 
 </body>
 </html>
